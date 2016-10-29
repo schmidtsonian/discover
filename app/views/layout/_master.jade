@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title=meta.title
+        meta(name='description' content=meta.description)
+
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+        meta(name='msapplication-tap-highlight', content='no')
+
+        //- Twitter Card data
+        meta(name='twitter:card', content='summary')
+        meta(name='twitter:site', content=meta.twitter_id)
+        meta(name='twitter:title', content=meta.twitter_title)
+        meta(name='twitter:description', content=meta.twitter_description)
+        meta(name='twitter:image', content=meta.twitter_image) 
+
+        //- Open Graph data
+        meta(property='og:title', content=meta.title)
+        meta(property='og:type', content='website')
+        meta(property='og:url', content=meta.url)
+        meta(property='og:image', content=meta.facebook_image)
+        meta(property='og:description', content=meta.description)
+        meta(property='og:site_name', content=meta.title)
+        meta(property='fb:app_id', content=meta.facebook_app_id)
+
+        link(rel='apple-touch-icon', sizes='57x57', href=meta.icon_57)
+        link(rel='apple-touch-icon', sizes='76x76', href=meta.icon_56)
+        link(rel='apple-touch-icon', sizes='114x114', href=meta.icon_114)
+        link(rel='apple-touch-icon', sizes='120x120', href=meta.icon_120)
+        link(rel='apple-touch-icon', sizes='144x144', href=meta.icon_144)
+        link(rel='apple-touch-icon', sizes='152x152', href=meta.icon_152)
+        link(rel='apple-touch-icon', sizes='180x180', href=meta.icon_180)
+        link(rel='icon', type="image/png", sizes='196x196', href=meta.icon_196)
+
+        meta(name='application-name', content=meta.application_name)
+        meta(name='msapplication-TileImage', content=meta.icon_114)
+        meta(name='msapplication-TileColor', content=meta.ms_application_tile_color)
+        meta(name="theme-color" content=meta.theme_color)
+
+        link(rel='stylesheet', type='text/css', href='css/main.css')
+
+    body
+
+        block body
+
+        script(src='js/vendor.js')
+        script(src='js/main.js')

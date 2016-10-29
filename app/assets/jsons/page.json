@@ -1,8 +1,32 @@
 {
-    "home": {
-        "title": "this is home"
+
+    "meta": {
+        "title": "this is home",
+        "description": "this is the description",
+        "url":"#",
+
+        "twitter_id": "@",
+        "twitter_title": "twitter title",
+        "twitter_description": "twitter description",
+        "twitter_image": "",
+
+        "facebook_image": "",
+        "facebook_app_id": "",
+
+        "icon_57": "",
+        "icon_56": "",
+        "icon_56": "",
+        "icon_114": "",
+        "icon_120": "",
+        "icon_144": "",
+        "icon_152": "",
+        "icon_180": "",
+
+        "application_name": "",
+        "ms_application_tile_color": "#ffffff",
+        "theme_color": "#000000"
     },
-    "chiangmai_thailand": {
-        "title": "this is Chiangmai Thailand"
+    "results": {
+
     }
 }
