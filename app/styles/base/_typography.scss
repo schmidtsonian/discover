@@ -1,8 +1,12 @@
-html,body {
-    color: $color_kabul;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    line-height: 2.25em;
+.h-font-serif {
+    font-family: $FONT_SERIF;
+    font-style: italic;
+}
+
+.h-font-monospace {
+    font-family: $FONT_MONOSPACE;
+}
+
+.h-font-sans-serif {
+    font-family: $FONT_SANS_SERIF;
 }

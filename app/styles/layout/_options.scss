@@ -1,0 +1,55 @@
+
+.l-options__loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 100px;
+    width: 280px;
+    margin: auto;
+    border: 1px solid $COLOR_WHITE;
+
+    @include transition( all 0.25s $ease-in-out-quad 0.25s );
+}
+
+.l-options__hud {
+
+    opacity: 0;
+
+    margin: 150px 20px 20px 20px;
+
+    @include transition( all 0.25s $ease-in-out-quad 0.75s );
+}
+
+.l-options__cards,
+.l-options__header {
+    position: relative;
+
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.l-options__cards__select {
+    position: relative;
+    float: left;
+
+    width: 50%;
+    border: 1px solid $COLOR_WHITE;
+    text-align: center;
+}
+
+
+.l-options {
+    &.loaded{
+
+        .l-options__loader {
+            top: 101px;
+            bottom: 100%;
+        }
+        .l-options__hud {
+            opacity: 1;
+        }
+    } 
+}

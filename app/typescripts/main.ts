@@ -1,8 +1,15 @@
 /// <reference path="definitions/jquery/jquery.d.ts" />
-let App: any;
 
-$('document')
+/// <reference path="App.ts" />
+
+import App = amex.App;
+
+let app: App;
+
+$( 'document' )
 .ready( () => {
 
-    console.log('!!');
+    app = new App();
+
+    app.start();
 });

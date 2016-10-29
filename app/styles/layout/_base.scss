@@ -1,0 +1,16 @@
+html,body {
+    background-color: $COLOR_BLUE_CHARCOAL;
+
+    color: $COLOR_WHITE;
+    font-family: $FONT_SANS_SERIF;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 2.25em;
+}
+a{
+    color: $COLOR_WHITE;
+}
+* {
+    box-sizing: border-box;
+}

@@ -1,10 +1,10 @@
-/// <reference path="definitions/jquery/jquery.d.ts"/>
+/// <reference path="../definitions/jquery/jquery.d.ts"/>
 
-namespace app {
+namespace amex.controls {
 
   export class RippleButton {
 
-    init(): void {
+    bindings(): void {
 
       $(document)
       .on('click touched', '.ripple', function(e) {

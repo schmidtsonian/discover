@@ -1,4 +1,4 @@
-/// <reference path="definitions/jquery/jquery.d.ts"/>
+/// <reference path="../definitions/jquery/jquery.d.ts"/>
 
 //TODO: Refactor !!!
 $.fn.isOnScreen = function(){
