@@ -59,7 +59,7 @@ namespace amex.controls {
 
                 this.$scope.addClass(this.nameClassLoaded);
                 defer.resolve();
-            }, 250);
+            }, 250 );
 
             return defer.promise();
         }

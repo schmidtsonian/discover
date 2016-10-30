@@ -1,0 +1,82 @@
+// BUTTON
+.l-menu__bt {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    @include size(110px);
+    @include transition( all .25s $ease-in-out-quad );
+    @include md-devices() {
+        cursor: pointer;
+    }
+    &.loaded {
+        opacity: 1;
+
+        @include transition-delay( .75s );
+    }
+    &.open {
+        .l_menu__bt__icon span {
+            &:nth-child(1),
+            &:nth-child(3) {
+                opacity: 0;
+            }
+            &:nth-child(2) {
+                @include transform(rotate(45deg));
+            }
+        }
+    }
+}
+
+.l_menu__bt__icon {
+    display: block;
+
+    @include size(24px 15px);
+    span {
+        display: block;
+
+        background-color: $COLOR_WHITE;
+
+        @include size(24px 1px);
+        &:nth-child(1) {
+            top: -15px;
+        }
+        &:nth-child(3) {
+            bottom: -15px;
+        }
+    }
+}
+
+
+// NAVIGATION
+.l-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    overflow-x: hidden;
+
+    width: 0;
+    height: 100%;
+
+    background-color: $COLOR_WHITE;
+
+    @include transition( all .25s $ease-in-out-quad );
+    &.open {
+        width: calc(100% - 110px);
+
+        .l-menu__content {
+            opacity: 1;
+            @include transition-duration( 0.15s );
+            @include transition-delay( .25s );
+        }
+    }
+}
+
+.l-menu__content {
+    opacity: 0;
+    color: $COLOR_DEEP_COVE;
+    @include transition( opacity .05s $ease-in-out-quad );
+}

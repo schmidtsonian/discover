@@ -1,6 +1,20 @@
+$EM-BASE: 18px;
+
+// $FOLDERS
+$IMAGES_DIR: '../images';
+
+// $MEDIA-QUERIES
+$XS_MAX_WIDTH: 480px;
+$SM_MIN_WIDTH: 768px;
+$MD_MIN_WIDTH: 1024px;
+
+
+// $COLORS
 $COLOR_WHITE: #ffffff;
 $COLOR_BLUE_CHARCOAL: #010810;
+$COLOR_DEEP_COVE: #071b40;
 
+// $FONTS
 $FONT_SERIF: serif; //old serif, titles and copys
 $FONT_MONOSPACE: monospace; //slab serif, big titles
 $FONT_SANS_SERIF: sans-serif; //simple texts

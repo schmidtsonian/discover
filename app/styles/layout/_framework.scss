@@ -1,0 +1,28 @@
+.l-framework__t,
+.l-framework__r,
+.l-framework__b,
+.l-framework__l {
+    position: fixed;
+    z-index: 100;
+
+    background-color: $COLOR_WHITE;
+}
+.l-framework__t,
+.l-framework__r {
+    @include size(100% 4px);
+}
+
+.l-framework__b,
+.l-framework__l {
+    @include size(4px 100%);
+}
+.l-framework__t,
+.l-framework__l {
+    top: 0;
+    left: 0;
+}
+.l-framework__b,
+.l-framework__r {
+    right: 0;
+    bottom: 0;
+}

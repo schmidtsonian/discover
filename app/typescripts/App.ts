@@ -2,6 +2,7 @@
 
 /// <reference path="controls/RippleButton.ts" />
 /// <reference path="controls/Options.ts" />
+/// <reference path="controls/Menu.ts" />
 
 /// <reference path="utils/Loader.ts" />
 
@@ -11,6 +12,7 @@ namespace amex {
 
     import RippleButton = amex.controls.RippleButton;
     import Options = amex.controls.Options;
+    import Menu = amex.controls.Menu;
     
 
     export class App {
@@ -19,6 +21,7 @@ namespace amex {
 
         private controlRippleButton: RippleButton;
         private controlOptions: Options;
+        private controlMenu: Menu;
 
         constructor() {
 
@@ -26,6 +29,7 @@ namespace amex {
 
             this.controlRippleButton = new RippleButton();
             this.controlOptions = new Options( this.utilLoader );
+            this.controlMenu = new Menu();
         }
 
         start() {
@@ -38,14 +42,16 @@ namespace amex {
         private bindings(): this {
 
             this.controlRippleButton.bindings();
+            this.controlMenu.bindings();
 
             return this;
         }
 
         private init(): this {
 
-            
-            this.controlOptions.init();
+            this.controlOptions
+                .init()
+                .then(() => { this.controlMenu.intro(); });
             return this;
         }
     }

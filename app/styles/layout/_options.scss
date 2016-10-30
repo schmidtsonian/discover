@@ -6,21 +6,28 @@
     bottom: 0;
     left: 0;
 
-    height: 100px;
     width: 280px;
+    height: 280px;
     margin: auto;
-    border: 1px solid $COLOR_WHITE;
 
-    @include transition( all 0.25s $ease-in-out-quad 0.25s );
+    border: 1px solid rgba($COLOR_WHITE, .5);
+    border-radius: 50%;
+
+    @include transition(all .25s $ease-in-out-quad );
 }
 
 .l-options__hud {
+    margin: 150px 20px 20px 20px;
 
     opacity: 0;
 
-    margin: 150px 20px 20px 20px;
+    @include transition(all .25s $ease-in-out-quad);
+    @include sm-devices() {
+        width: 728px;
+        height: 500px;
 
-    @include transition( all 0.25s $ease-in-out-quad 0.75s );
+        @include absolute-center;
+    }
 }
 
 .l-options__cards,
@@ -31,25 +38,39 @@
     margin: 0 auto;
 }
 
+.l-options__cards {
+    @include sm-devices() {
+        position: absolute;
+        bottom: 0;
+
+        height: 200px;
+    }
+}
+
 .l-options__cards__select {
     position: relative;
+
     float: left;
 
     width: 50%;
-    border: 1px solid $COLOR_WHITE;
+
     text-align: center;
+
+    border: 1px solid $COLOR_WHITE;
 }
 
-
 .l-options {
-    &.loaded{
-
+    &.loaded {
         .l-options__loader {
             top: 101px;
             bottom: 100%;
+
+            @include transition-delay( .25s );
         }
         .l-options__hud {
             opacity: 1;
+
+            @include transition-delay( .75s );
         }
-    } 
+    }
 }
