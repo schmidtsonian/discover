@@ -42,7 +42,10 @@ namespace amex {
         private bindings(): this {
 
             this.controlRippleButton.bindings();
+            this.controlOptions.bindings();
             this.controlMenu.bindings();
+
+            this.controlOptions.onSelectResult = (id) => { console.log(id);}
 
             return this;
         }

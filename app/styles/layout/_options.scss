@@ -34,29 +34,9 @@
 .l-options__header {
     position: relative;
 
+    width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-}
-
-.l-options__cards {
-    @include sm-devices() {
-        position: absolute;
-        bottom: 0;
-
-        height: 200px;
-    }
-}
-
-.l-options__cards__select {
-    position: relative;
-
-    float: left;
-
-    width: 50%;
-
-    text-align: center;
-
-    border: 1px solid $COLOR_WHITE;
 }
 
 .l-options {
@@ -73,4 +53,47 @@
             @include transition-delay( .75s );
         }
     }
+}
+
+
+
+.l-options__cards {
+    @include sm-devices() {
+        position: absolute;
+        bottom: 0;
+
+        height: 200px;
+    }
+}
+
+
+
+
+.l-options__cards__slides {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+.l-options__cards__slide {
+    display: none;
+
+    height: 100%;
+    &:nth-child(1) {
+        display: block;
+    }
+}
+
+
+.l-options__cards__select {
+    position: relative;
+
+    float: left;
+
+    width: 50%;
+    height: 100%;
+
+    text-align: center;
+
+    border: 1px solid $COLOR_WHITE;
 }

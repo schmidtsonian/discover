@@ -1,9 +1,18 @@
+mixin get_card(mood, title, description, id_option, id_result )
+    .l-options__cards__select(
+    class='js-option-card',
+    data-option=id_option,
+    data-result=id_result)
+        p(class='h-font-serif')=mood
+        p=title
+        p(class='h-font-serif')=description
+
+
+
 .l-options(id='js-options')
 
     .l-options__loader(
     id='js-options__loader')
-
-        
 
     main.l-options__hud(
     id='js-options__hud')
@@ -25,20 +34,19 @@
 
         .l-options__cards
 
-            .l-options__cards__slides
-                .l-options__cards__slide
-                    
-                    .l-options__cards__select
-                        p(class='h-font-serif') I want
-                        p ADVENTURE
-                        p(class='h-font-serif')
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        
+            ul.l-options__cards__slides
 
-                    .l-options__cards__select
-                        p(class='h-font-serif') I want
-                        p RELAXATION
-                        p(class='h-font-serif')
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                each item in options
+                    
+                    li.l-options__cards__slide(
+                    id=item.id,
+                    class='js-options-slide')
+                        each card in item.cards
+                            +get_card(
+                            card.mood, 
+                            card.title, 
+                            card.description, 
+                            card.id_option, 
+                            card.id_result)
 
             span.clearfix

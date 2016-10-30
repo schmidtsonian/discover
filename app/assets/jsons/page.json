@@ -26,6 +26,156 @@
         "ms_application_tile_color": "#ffffff",
         "theme_color": "#000000"
     },
+    "options": [
+
+        {
+            "id": "option-splash",
+            "cards": [
+                {
+                    "mood": "Give me",
+                    "title": "relaxation",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "option-relaxation",
+                    "id_result": ""
+                },
+                {
+                    "mood": "I want",
+                    "title": "adventure",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "option-adventure",
+                    "id_result": ""
+                }
+            ]
+        },
+        {
+            "id": "option-relaxation",
+            "cards": [
+                {
+                    "mood": "Give me",
+                    "title": "unwind",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "option-unwind",
+                    "id_result": ""
+                },
+                {
+                    "mood": "I want",
+                    "title": "indulge",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "option-indulge",
+                    "id_result": ""
+                }
+            ]
+        },
+        {
+            "id": "option-adventure",
+            "cards": [
+                {
+                    "mood": "Give me",
+                    "title": "absorb",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "option-absorb",
+                    "id_result": ""
+                },
+                {
+                    "mood": "I want",
+                    "title": "thrill",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "option-thrill",
+                    "id_result": ""
+                }
+            ]
+        },
+        {
+            "id": "option-unwind",
+            "cards": [
+                {
+                    "mood": "Give me",
+                    "title": "coastal",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                },
+                {
+                    "mood": "I want",
+                    "title": "mountains",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                }
+            ]
+        },
+        {
+            "id": "option-indulge",
+            "cards": [
+                {
+                    "mood": "Give me",
+                    "title": "street food",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                },
+                {
+                    "mood": "I want",
+                    "title": "fine food",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                }
+            ]
+        },
+        {
+            "id": "option-absorb",
+            "cards": [
+                {
+                    "mood": "Give me",
+                    "title": "art & culture",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                },
+                {
+                    "mood": "I want",
+                    "title": "enlightenment",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                }
+            ]
+        },
+        {
+            "id": "option-thrill",
+            "cards": [
+                {
+                    "mood": "Give me",
+                    "title": "jungle",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                },
+                {
+                    "mood": "I want",
+                    "title": "ocean",
+                    "description": "Lorem ipsum",
+                    "img": "",
+                    "id_option": "",
+                    "id_result": ""
+                }
+            ]
+        }
+    ],
     "results": {
 
     }

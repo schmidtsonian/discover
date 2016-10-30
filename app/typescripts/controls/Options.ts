@@ -11,16 +11,33 @@ namespace amex.controls {
         private loader: Loader;
 
         private $scope: JQuery;
+        private $slides: JQuery;
+        private $cards: JQuery;
         private isOpen: boolean;
 
         private nameClassLoaded: string;
+        private nameDataOption: string;
+        private nameDataResult: string;
+
+        public onSelectResult: Function;
 
         constructor(loader: Loader){
 
             this.loader = loader;
             this.$scope = $( '#js-options' );
+            this.$slides = $( '.js-options-slide', this.$scope );
+            this.$cards = $( '.js-option-card', this.$scope );
+
             this.nameClassLoaded = 'loaded';
+            this.nameDataOption = 'option';
+            this.nameDataResult = 'result';
+
             this.isOpen = true;
+        }
+
+        bindings() {
+
+            this.$cards.on('click touched', this.onClickCard.bind( this ) );
         }
 
         init(): JQueryPromise<{}> {
@@ -64,16 +81,37 @@ namespace amex.controls {
             return defer.promise();
         }
 
-        private resetOptions() {
 
+        private  onClickCard( e: JQueryEventObject ) {
+
+            const $el = $( e.currentTarget );
+            const idOption: string = $el.data (this.nameDataOption );
+            
+            if(  idOption != "" ){
+
+                this.openSlide( idOption );
+
+            } else {
+
+                if(typeof this.onSelectResult == 'function' ){
+                    this.onSelectResult( $el.data( this.nameDataResult ));
+                }
+            }
+        }
+        
+        resetOptions() {
         }
 
-        open() {
+        openSlide(idOption: string) {
 
-            if(this.isOpen){ return; }
+            const $el = this.$slides.filter( function(){ return this.id == idOption });
+            if($el.length <= 0){ return; }
+
+            this.$slides.css({'display': 'none' });
+            $el.css({'display': 'block' });
         }
 
-        close() {
+        private closeAll() {
 
             if(!this.isOpen){ return; }
         }
