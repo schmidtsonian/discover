@@ -3,10 +3,10 @@ mixin get_card(mood, title, description, id_option, id_result )
     class='js-option-card',
     data-option=id_option,
     data-result=id_result)
+        
         p(class='h-font-serif')=mood
         p=title
         p(class='h-font-serif')=description
-
 
 
 .l-options(id='js-options')

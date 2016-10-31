@@ -29,14 +29,14 @@
     "options": [
 
         {
-            "id": "option-splash",
+            "id": "option_splash",
             "cards": [
                 {
                     "mood": "Give me",
                     "title": "relaxation",
                     "description": "Lorem ipsum",
                     "img": "",
-                    "id_option": "option-relaxation",
+                    "id_option": "option_relaxation",
                     "id_result": ""
                 },
                 {
@@ -44,20 +44,20 @@
                     "title": "adventure",
                     "description": "Lorem ipsum",
                     "img": "",
-                    "id_option": "option-adventure",
+                    "id_option": "option_adventure",
                     "id_result": ""
                 }
             ]
         },
         {
-            "id": "option-relaxation",
+            "id": "option_relaxation",
             "cards": [
                 {
                     "mood": "Give me",
                     "title": "unwind",
                     "description": "Lorem ipsum",
                     "img": "",
-                    "id_option": "option-unwind",
+                    "id_option": "option_unwind",
                     "id_result": ""
                 },
                 {
@@ -65,20 +65,20 @@
                     "title": "indulge",
                     "description": "Lorem ipsum",
                     "img": "",
-                    "id_option": "option-indulge",
+                    "id_option": "option_indulge",
                     "id_result": ""
                 }
             ]
         },
         {
-            "id": "option-adventure",
+            "id": "option_adventure",
             "cards": [
                 {
                     "mood": "Give me",
                     "title": "absorb",
                     "description": "Lorem ipsum",
                     "img": "",
-                    "id_option": "option-absorb",
+                    "id_option": "option_absorb",
                     "id_result": ""
                 },
                 {
@@ -86,13 +86,13 @@
                     "title": "thrill",
                     "description": "Lorem ipsum",
                     "img": "",
-                    "id_option": "option-thrill",
+                    "id_option": "option_thrill",
                     "id_result": ""
                 }
             ]
         },
         {
-            "id": "option-unwind",
+            "id": "option_unwind",
             "cards": [
                 {
                     "mood": "Give me",
@@ -100,7 +100,7 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_fiji"
                 },
                 {
                     "mood": "I want",
@@ -108,12 +108,12 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_bali"
                 }
             ]
         },
         {
-            "id": "option-indulge",
+            "id": "option_indulge",
             "cards": [
                 {
                     "mood": "Give me",
@@ -121,7 +121,7 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_mexico"
                 },
                 {
                     "mood": "I want",
@@ -129,12 +129,12 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_denmark"
                 }
             ]
         },
         {
-            "id": "option-absorb",
+            "id": "option_absorb",
             "cards": [
                 {
                     "mood": "Give me",
@@ -142,7 +142,7 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_spain"
                 },
                 {
                     "mood": "I want",
@@ -150,12 +150,12 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_japan"
                 }
             ]
         },
         {
-            "id": "option-thrill",
+            "id": "option_thrill",
             "cards": [
                 {
                     "mood": "Give me",
@@ -163,7 +163,7 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_amazon"
                 },
                 {
                     "mood": "I want",
@@ -171,12 +171,59 @@
                     "description": "Lorem ipsum",
                     "img": "",
                     "id_option": "",
-                    "id_result": ""
+                    "id_result": "result_brazil"
                 }
             ]
         }
     ],
     "results": {
-
+        "result_fiji": {
+            "id": "result_fiji",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_brazil",
+            "id_next": "result_bali"
+        },
+        "result_bali": {
+            "id": "result_bali",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_fiji",
+            "id_next": "result_mexico"
+        },
+        "result_mexico": {
+            "id": "result_mexico",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_bali",
+            "id_next": "result_denmark"
+        },
+        "result_denmark": {
+            "id": "result_denmark",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_mexico",
+            "id_next": "result_spain"
+        },
+        "result_spain": {
+            "id": "result_spain",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_denmark",
+            "id_next": "result_japan"
+        },
+        "result_japan": {
+            "id": "result_japan",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_spain",
+            "id_next": "result_amazon"
+        },
+        "result_amazon": {
+            "id": "result_amazon",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_japan",
+            "id_next": "result_brazil"
+        },
+        "result_brazil": {
+            "id": "result_brazil",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_amazon",
+            "id_next": "result_fiji"
+        }
     }
 }

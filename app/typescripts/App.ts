@@ -2,6 +2,7 @@
 
 /// <reference path="controls/RippleButton.ts" />
 /// <reference path="controls/Options.ts" />
+/// <reference path="controls/Results.ts" />
 /// <reference path="controls/Menu.ts" />
 
 /// <reference path="utils/Loader.ts" />
@@ -12,6 +13,7 @@ namespace amex {
 
     import RippleButton = amex.controls.RippleButton;
     import Options = amex.controls.Options;
+    import Results = amex.controls.Results;
     import Menu = amex.controls.Menu;
     
 
@@ -21,6 +23,7 @@ namespace amex {
 
         private controlRippleButton: RippleButton;
         private controlOptions: Options;
+        private controlResults: Results;
         private controlMenu: Menu;
 
         constructor() {
@@ -29,6 +32,7 @@ namespace amex {
 
             this.controlRippleButton = new RippleButton();
             this.controlOptions = new Options( this.utilLoader );
+            this.controlResults = new Results( this.utilLoader );
             this.controlMenu = new Menu();
         }
 
@@ -45,7 +49,11 @@ namespace amex {
             this.controlOptions.bindings();
             this.controlMenu.bindings();
 
-            this.controlOptions.onSelectResult = (id) => { console.log(id);}
+            this.controlOptions.onSelectResult = (id: string) => { 
+                this.controlOptions
+                    .close()
+                    .then( () => { this.controlResults.open( id ); });
+            }
 
             return this;
         }

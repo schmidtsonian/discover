@@ -21,7 +21,7 @@ namespace amex.controls {
 
         public onSelectResult: Function;
 
-        constructor(loader: Loader){
+        constructor( loader: Loader ){
 
             this.loader = loader;
             this.$scope = $( '#js-options' );
@@ -81,8 +81,9 @@ namespace amex.controls {
             return defer.promise();
         }
 
-
         private  onClickCard( e: JQueryEventObject ) {
+
+            if( !this.isOpen ) { return; }
 
             const $el = $( e.currentTarget );
             const idOption: string = $el.data (this.nameDataOption );
@@ -93,16 +94,13 @@ namespace amex.controls {
 
             } else {
 
-                if(typeof this.onSelectResult == 'function' ){
+                if( typeof this.onSelectResult == 'function' ){
                     this.onSelectResult( $el.data( this.nameDataResult ));
                 }
             }
         }
-        
-        resetOptions() {
-        }
 
-        openSlide(idOption: string) {
+        private openSlide( idOption: string ) {
 
             const $el = this.$slides.filter( function(){ return this.id == idOption });
             if($el.length <= 0){ return; }
@@ -111,11 +109,34 @@ namespace amex.controls {
             $el.css({'display': 'block' });
         }
 
-        private closeAll() {
+        reset(): JQueryPromise<{}> {
 
-            if(!this.isOpen){ return; }
+            const defer = $.Deferred();
+
+            this.isOpen = true;
+
+            defer.resolve();
+            return defer.promise();
         }
 
+        close(): JQueryPromise<{}> {
+
+            const defer = $.Deferred();
+
+            if( !this.isOpen ) { 
+
+                defer.resolve(); 
+            } else {
+
+                this.isOpen = false;
+                this.$scope.css({'display': 'none' });
+                defer.resolve();
+            }
+
+            
+            return defer.promise();
+
+        }
         
     }
 }
