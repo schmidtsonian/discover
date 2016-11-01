@@ -3,8 +3,22 @@
         "result_fiji": {
             "id": "result_fiji",
             "id_template": "js-results__template__a",
-            "id_prev": "result_brazil",
-            "id_next": "result_bali"
+
+            "nav": {
+                "prev": {
+                    "id": "result_brazil",
+                    "country": "Brazil",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_bali",
+                    "country": "Bali",
+                    "title": "LOREM IPSUM"
+                }
+            },
+
+            "title": "Fiji",
+            "description": "Cyber-convenience store table augmented reality skyscraper wristwatch-ware bridge drone savant marketing. Wonton soup tiger-team cardboard Chiba plastic-space woman convenience store 8-bit. Semiotics ablative cartel-ware media long-chain hydrocarbons Shibuya drone receding rifle tower savant. Modem refrigerator youtube city uplink tanto range-rover stimulate car decay semiotics-ware construct wristwatch artisanal. Corporation sprawl neural ablative urban wristwatch rain pre-receding j-pop. Geodesic receding cyber-engine shanty town artisanal dissident computer-ware corporation Legba rebar smart-San Francisco face forwards assault. Bomb corporation sign euro-pop math-dolphin uplink augmented reality semiotics render-farm meta-sub-orbital paranoid faded boy. Bicycle RAF office sub-orbital chrome."
         }
     }
 }

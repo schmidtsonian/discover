@@ -3,8 +3,22 @@
         "result_denmark": {
             "id": "result_denmark",
             "id_template": "js-results__template__a",
-            "id_prev": "result_mexico",
-            "id_next": "result_spain"
+
+            "nav": {
+                "prev": {
+                    "id": "result_mexico",
+                    "country": "México",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_spain",
+                    "country": "Spain",
+                    "title": "LOREM IPSUM"
+                }
+            },
+
+            "title": "Denmark",
+            "description": "Neon drone assault hotdog vinyl dolphin spook tanto faded sunglasses A.I. pen. Camera cyber-alcohol RAF courier rifle sunglasses systemic nano-bomb artisanal dolphin human concrete smart-woman. Camera shoes papier-mache cardboard warehouse footage pistol gang katana soul-delay. Stimulate into refrigerator human meta-sentient hotdog market katana papier-mache car fetishism. Corporation soul-delay assault paranoid jeans free-market lights Legba kanji realism footage tiger-team spook post-savant silent. Rifle dissident tiger-team network nodality market neon narrative footage stimulate. Into sub-orbital towards warehouse ablative weathered denim dolphin convenience store-space knife. Bicycle RAF office sub-orbital chrome."
         }
     }
 }    

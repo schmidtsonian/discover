@@ -3,8 +3,22 @@
         "result_japan": {
             "id": "result_japan",
             "id_template": "js-results__template__a",
-            "id_prev": "result_spain",
-            "id_next": "result_amazon"
+
+            "nav": {
+                "prev": {
+                    "id": "result_spain",
+                    "country": "Spain",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_amazon",
+                    "country": "Brazil",
+                    "title": "LOREM IPSUM"
+                }
+            },
+
+            "title": "Japan",
+            "description": "Vehicle neon apophenia-ware alcohol tattoo warehouse sign j-pop sunglasses. Neural post-warehouse assassin kanji decay beef noodles dissident chrome Tokyo tanto garage pre-fluidity advert. Hotdog wristwatch human silent into Legba disposable apophenia rifle tanto warehouse narrative j-pop. BASE jump sub-orbital computer post-fluidity cardboard-space RAF realism grenade. Cyber-math-claymore mine vehicle military-grade tattoo shanty town katana semiotics BASE jump uplink pistol warehouse into systemic. Silent geodesic-space post-media youtube tube artisanal RAF fetishism warehouse San Francisco grenade singularity film. Bicycle RAF office sub-orbital chrome."
         }
     }
 }

@@ -47,6 +47,7 @@ namespace amex {
 
             this.controlRippleButton.bindings();
             this.controlOptions.bindings();
+            this.controlResults.bindings();
             this.controlMenu.bindings();
 
             this.controlOptions.onSelectResult = (id: string) => { 

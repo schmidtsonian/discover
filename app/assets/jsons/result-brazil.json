@@ -3,8 +3,22 @@
         "result_brazil": {
             "id": "result_brazil",
             "id_template": "js-results__template__a",
-            "id_prev": "result_amazon",
-            "id_next": "result_fiji"
+
+            "nav": {
+                "prev": {
+                    "id": "result_amazon",
+                    "country": "Brazil",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_fiji",
+                    "country": "Fiji",
+                    "title": "LOREM IPSUM"
+                }
+            },
+
+            "title": "Brazil",
+            "description": "Artisanal denim warehouse rain fetishism smart-advert singularity euro-pop girl media-space industrial grade garage weathered human. Construct sensory kanji boat otaku rain physical digital nodality. Otaku refrigerator skyscraper uplink silent long-chain hydrocarbons narrative faded Tokyo soul-delay pre. Disposable-ware Legba plastic sensory into network. Dissident youtube free-market hotdog post-nodality neon meta-Kowloon sprawl paranoid pen augmented reality crypto-wonton soup marketing. Corporation neural vinyl skyscraper dolphin face forwards systemic otaku bicycle film BASE jump assault. Garage dead kanji singularity pre-rifle nano-3D-printed bicycle. Shoes tiger-team city bicycle cartel disposable convenience store denim futurity carbon artisanal. Bicycle RAF office sub-orbital chrome."
         }
     }
 }    

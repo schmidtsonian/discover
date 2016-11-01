@@ -3,8 +3,22 @@
         "result_spain": {
             "id": "result_spain",
             "id_template": "js-results__template__a",
-            "id_prev": "result_denmark",
-            "id_next": "result_japan"
+
+            "nav": {
+                "prev": {
+                    "id": "result_denmark",
+                    "country": "Denmark",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_japan",
+                    "country": "Japan",
+                    "title": "LOREM IPSUM"
+                }
+            },
+
+            "title": "Spain",
+            "description": "Savant face forwards BASE jump digital crypto-carbon systema kanji euro-pop paranoid San Francisco market receding plastic sign-ware math. Refrigerator youtube footage uplink drone Legba nano. Augmented reality youtube carbon ablative physical tanto computer dissident sentient. Network narrative artisanal plastic savant assault physical silent systema. Skyscraper apophenia BASE jump corporation advert savant convenience store construct man chrome urban pen modem. Refrigerator jeans franchise drugs nodality tattoo gang cartel decay silent range-rover network wonton soup bomb. Artisanal render-farm soul-delay boy j-pop tank-traps market euro-pop uplink sub-orbital pen RAF nano-sentient katana dead. Rifle-space kanji crypto-augmented reality digital table cardboard camera neon 3D-printed alcohol. "
         }
     }
 }    

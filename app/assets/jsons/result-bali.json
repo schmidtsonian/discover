@@ -3,8 +3,22 @@
         "result_bali": {
             "id": "result_bali",
             "id_template": "js-results__template__a",
-            "id_prev": "result_fiji",
-            "id_next": "result_mexico"
+
+            "nav": {
+                "prev": {
+                    "id": "result_fiji",
+                    "country": "Fiji",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_mexico",
+                    "country": "México",
+                    "title": "LOREM IPSUM"
+                }
+            },
+
+            "title": "Bali",
+            "description": "Claymore mine car urban assault faded sub-orbital corrupted Legba tiger-team sentient. Weathered shanty town cardboard dolphin math-convenience store fluidity fetishism boy post-human drugs chrome concrete tanto systemic. Narrative assassin dissident katana dome corporation pen voodoo god nodal point j-pop rifle paranoid refrigerator. Bicycle RAF office sub-orbital chrome."
         }
     }
 }

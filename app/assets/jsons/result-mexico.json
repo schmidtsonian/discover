@@ -3,8 +3,22 @@
         "result_mexico": {
             "id": "result_mexico",
             "id_template": "js-results__template__a",
-            "id_prev": "result_bali",
-            "id_next": "result_denmark"
+
+            "nav": {
+                "prev": {
+                    "id": "result_bali",
+                    "country": "Bali",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_denmark",
+                    "country": "Denmark",
+                    "title": "LOREM IPSUM"
+                }
+            },
+
+            "title": "Mexico",
+            "description": "Voodoo god car tanto office dome kanji into-ware stimulate systema bridge apophenia gang. Courier tube corporation apophenia savant Shibuya sub-orbital stimulate. San Francisco-ware network cyber-8-bit shoes euro-pop towards market lights tank-traps Kowloon post-semiotics ablative. Advert sunglasses nano-chrome assault Tokyo San Francisco camera DIY rain media gang rebar math-skyscraper decay alcohol. Bicycle RAF office sub-orbital chrome."
         }
     }
 }

@@ -3,8 +3,22 @@
         "result_amazon": {
             "id": "result_amazon",
             "id_template": "js-results__template__a",
-            "id_prev": "result_japan",
-            "id_next": "result_brazil"
+            
+            "nav": {
+                "prev": {
+                    "id": "result_japan",
+                    "country": "Japan",
+                    "title": "LOREM IPSUM"
+                },
+                "next": {
+                    "id": "result_brazil",
+                    "country": "Brazil",
+                    "title": "RIO DE JANEIRO"
+                }
+            },
+
+            "title": "Amazon",
+            "description": "Rain vinyl semiotics smart-shrine film voodoo god meta-corrupted DIY. Grenade urban franchise soul-delay girl voodoo god paranoid shanty town euro-pop Chiba disposable media nodality faded motion math. Garage bridge shanty town film uplink gang BASE jump silent. Hotdog DIY pen table tube pre-rain free-market drugs semiotics systema sensory systemic katana. Skyscraper saturation point cyber-artisanal youtube convenience store kanji BASE jump A.I.. Human apophenia construct augmented reality spook marketing denim crypto-weathered post-sensory vinyl systemic bicycle. DIY sign ablative denim woman range-rover rain boat cyber. Man wonton soup San Francisco tube shanty town receding film pen. "
         }
     }
 }
