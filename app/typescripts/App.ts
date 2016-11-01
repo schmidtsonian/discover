@@ -50,11 +50,20 @@ namespace amex {
             this.controlResults.bindings();
             this.controlMenu.bindings();
 
-            this.controlOptions.onSelectResult = (id: string) => { 
-                this.controlOptions
-                    .close()
-                    .then( () => { this.controlResults.open( id ); });
+            this.controlOptions.onSelectResult = ( id: string ) => { 
+
+                this.controlOptions.close()
+                    .then( () => { 
+                        this.controlResults.open()
+                            .then( () => { this.controlResults.openResultsById( id ) } )
+                    });
             }
+
+            this.controlMenu.onSelectReset = () => {
+
+                this.controlResults.close();
+                this.controlOptions.reset();
+            };
 
             return this;
         }

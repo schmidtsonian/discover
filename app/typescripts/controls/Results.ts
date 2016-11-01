@@ -12,7 +12,9 @@ namespace amex.controls {
         private loader: Loader;
         private $scope: JQuery;
         private $places: JQuery;
+        private nameSelectorNavResults: string;
         private nameDataContent: string;
+        private nameDataResultId: string;
         private isOpen: boolean;
 
         constructor ( loader: Loader ) {
@@ -21,7 +23,9 @@ namespace amex.controls {
             this.$scope = $( '#js-reults' );
             this.$places = $( '.js-results__place', this.$scope );
 
+            this.nameSelectorNavResults = '.js-results__nav';
             this.nameDataContent = 'content';
+            this.nameDataResultId = 'result-id';
             this.isOpen = false;
         }
 
@@ -31,19 +35,20 @@ namespace amex.controls {
         }
 
         bindings() {
-            $(document)
-            .on('click touched', '.js-results__nav', (e) => { 
-                console.log( $(e.currentTarget).data('result-id'));
-                this.open( $(e.currentTarget).data('result-id') );
+
+            $( document )
+            .on( 'click touched', this.nameSelectorNavResults, ( e ) => { 
+                this.openResultsById( $( e.currentTarget ).data( this.nameDataResultId ) );
             })
         }
         
-        open ( idResult: string ): JQueryPromise<{}> {
+        openResultsById ( idResult: string ): JQueryPromise<{}> {
             
             const defer = $.Deferred();
             const $el = this.$places.filter( function(){ return this.id == idResult });
             
-            if( $el.length <= 0){ defer.resolve(); }
+            if( $el.length <= 0 ){ defer.resolve(); }
+
 
             this.closeAll();
 
@@ -51,10 +56,40 @@ namespace amex.controls {
             const src = $( '#' + content.id_template ).html();
             const template = Handlebars.compile(src);
 
-            $el.append(template(content));
+            $el.append( template(content) );
+
+            // resolve animation
+            defer.resolve();
+            
+            return defer.promise();
+        }
+
+        open(): JQueryPromise<{}> {
+
+            const defer = $.Deferred();
+
+            if( this.isOpen ) { defer.resolve(); }
 
             this.isOpen = true;
+            this.$scope.css({'display': 'block' });
+            
+            // resolve animation
+            defer.resolve();
+            
+            return defer.promise();
+        }
 
+        close(): JQueryPromise<{}> {
+
+            const defer = $.Deferred();
+
+            if( !this.isOpen ) { defer.resolve(); }
+
+            this.closeAll();
+            this.isOpen = false;
+            this.$scope.css({'display': 'none' });
+            
+            // resolve animation
             defer.resolve();
             
             return defer.promise();

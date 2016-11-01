@@ -6,16 +6,20 @@ namespace amex.controls {
     export class Menu {
 
         private $btMenu: JQuery;
+        private $btReset: JQuery;
         private $nav: JQuery;
 
         private nameClassOpen: string;
         private nameClassLoaded: string;
         private isOpen: boolean;
 
+        public onSelectReset: Function;
+
         constructor () {
 
             this.$btMenu = $( '#js-menu__bt' );
             this.$nav = $( '#js-menu' );
+            this.$btReset = $( '#js-reset' );
             this.nameClassOpen = 'open';
             this.nameClassLoaded = 'loaded';
             this.isOpen = false;
@@ -29,9 +33,18 @@ namespace amex.controls {
 
         bindings() : this {
 
-            this.$btMenu.on('click touched', this.toggle.bind(this) );
+            this.$btMenu.on( 'click touched', this.toggle.bind( this ) );
+            this.$btReset.on( 'click touched', this.onReset.bind( this ) );
 
             return this;
+        }
+
+        private onReset() {
+
+            if( typeof this.onSelectReset == 'function' ){
+                this.close();
+                this.onSelectReset();
+            }
         }
 
         private toggle() {

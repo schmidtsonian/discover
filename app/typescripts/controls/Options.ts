@@ -113,9 +113,22 @@ namespace amex.controls {
 
             const defer = $.Deferred();
 
-            this.isOpen = true;
+            if( this.isOpen ) { 
 
-            defer.resolve();
+                defer.resolve(); 
+            } else {
+
+                this.isOpen = true;
+
+                this.$slides
+                    .css( { 'display': 'none' } )
+                    .eq( 0 ).css( { 'display': 'block' } );
+
+                this.$scope.css( { 'display': 'block' } );
+                defer.resolve();
+            }
+
+            
             return defer.promise();
         }
 
@@ -137,6 +150,5 @@ namespace amex.controls {
             return defer.promise();
 
         }
-        
     }
 }
