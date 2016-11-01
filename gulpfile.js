@@ -2,11 +2,13 @@ var fs              = require('fs');
 
 var gulp            = require('gulp');
 var data            = require('gulp-data');
+var lazypipe        = require('lazypipe');
 var gutil           = require('gulp-util');
 var jsonminify      = require('gulp-json-minify');
 var gulpFilter      = require('gulp-filter');
 var concat          = require('gulp-concat');
 var merge           = require('merge2');
+var mergeJsons      = require('gulp-merge-json');
 var uglify          = require('gulp-uglify');
 var sass            = require('gulp-sass');
 var jade            = require('gulp-jade');
@@ -163,12 +165,22 @@ gulp.task('styles', function () {
         .pipe(connect.reload());
 });
 
+gulp.task( 'viewsData', function() {
+
+    return gulp
+        .src(path.jsons.src)
+        .pipe(mergeJsons('combined.json'))
+        .pipe(gulp.dest(path.jsons.dest))
+        .pipe(connect.reload());
+});
+
 gulp.task( 'views', function() {
+
     return gulp
         .src( path.views.src )
-        .pipe(data( function(file) {
+        .pipe( data( function(file) {
             return JSON.parse(
-                fs.readFileSync('app/assets/jsons/page.json')
+                fs.readFileSync('public/jsons/combined.json')
             );
         } ))
         .pipe( jade( {pretty: false } ))
@@ -179,6 +191,9 @@ gulp.task( 'views', function() {
 
 gulp.task('watch', function () {
 
+    gulp.watch(path.jsons.src, function() {
+        runSequence('viewsData', 'views');
+    });
     gulp.watch(path.views.src, ['views']);
     gulp.watch(path.styles.src, ['styles']);
     gulp.watch(path.scripts.src, ['scripts']);
@@ -192,7 +207,7 @@ gulp.task('watch', function () {
 //https://github.com/addyosmani/critical-path-css-demo
 gulp.task('default', function(callback) {
   runSequence(
-    'clean:public', [
+    'clean:public', 'viewsData', [
         'vendor-scripts', 
         'scripts', 
         'styles', 
@@ -200,7 +215,8 @@ gulp.task('default', function(callback) {
         'images',
         //'jsons',
         'fonts',
-        'views'], 
+        'views'
+    ], 
     'webserver',
     'uri', 
     'watch',

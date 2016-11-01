@@ -1,0 +1,10 @@
+{
+    "results": {
+        "result_brazil": {
+            "id": "result_brazil",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_amazon",
+            "id_next": "result_fiji"
+        }
+    }
+}    

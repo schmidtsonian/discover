@@ -1,0 +1,10 @@
+{
+    "results": {
+        "result_mexico": {
+            "id": "result_mexico",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_bali",
+            "id_next": "result_denmark"
+        }
+    }
+}

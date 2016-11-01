@@ -1,0 +1,10 @@
+{
+    "results": {
+        "result_japan": {
+            "id": "result_japan",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_spain",
+            "id_next": "result_amazon"
+        }
+    }
+}

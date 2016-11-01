@@ -1,0 +1,10 @@
+{
+    "results": {
+        "result_bali": {
+            "id": "result_bali",
+            "id_template": "js-results__template__a",
+            "id_prev": "result_fiji",
+            "id_next": "result_mexico"
+        }
+    }
+}

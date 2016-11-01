@@ -176,54 +176,5 @@
             ]
         }
     ],
-    "results": {
-        "result_fiji": {
-            "id": "result_fiji",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_brazil",
-            "id_next": "result_bali"
-        },
-        "result_bali": {
-            "id": "result_bali",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_fiji",
-            "id_next": "result_mexico"
-        },
-        "result_mexico": {
-            "id": "result_mexico",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_bali",
-            "id_next": "result_denmark"
-        },
-        "result_denmark": {
-            "id": "result_denmark",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_mexico",
-            "id_next": "result_spain"
-        },
-        "result_spain": {
-            "id": "result_spain",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_denmark",
-            "id_next": "result_japan"
-        },
-        "result_japan": {
-            "id": "result_japan",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_spain",
-            "id_next": "result_amazon"
-        },
-        "result_amazon": {
-            "id": "result_amazon",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_japan",
-            "id_next": "result_brazil"
-        },
-        "result_brazil": {
-            "id": "result_brazil",
-            "id_template": "js-results__template__a",
-            "id_prev": "result_amazon",
-            "id_next": "result_fiji"
-        }
-    }
+    "results": {}
 }
