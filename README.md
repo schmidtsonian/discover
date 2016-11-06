@@ -1,3 +1,5 @@
+## Full responsive card discover game WIP
+
 ```
 ~ npm install & bower install
 ```
@@ -6,4 +8,4 @@
 ~ gulp
 ```
 
-[localhost:8080](http://localhost:8080)
+
